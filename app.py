@@ -8,6 +8,7 @@ def index():
     message = ""
     if request.method == "POST":
         area = request.form.get("area")
+        # TODO: заменить на модель
         message = int(area) * 300_000
     return render_template("index.html", message=message)
 
